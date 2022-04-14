@@ -1,6 +1,6 @@
-# BarChartAnalyzer (BCA)
+# BarChartAnalyzer (BCA) 
 
-Data extraction of Bar charts and its' variants using tensor field computation.
+Data extraction of Bar charts and its' variants using tensor field computation | [Paper](https://www.scitepress.org/Papers/2021/104083/104083.pdf) |
 
 ## Text Detection and Recognition Module
 
@@ -9,12 +9,13 @@ This module performs text detection and recognition on chart Image. We use a dee
 ### To run the code
 
 Things to be taken care before runing the code:
-1. Fetch CRAFT text detection code from [CRAFT_TextDetector](https://github.com/GVCL/Tensor-field-framework-for-chart-analysis/tree/master/Chart-Analyzer/CRAFT_TextDetector), and place dir at the following path ```BarChartAnalyzer_BCA/CRAFT_TextDetector```
+1. Fetch CRAFT text detection code from [CRAFT_TextDetector](https://github.com/GVCL/Tensor-field-framework-for-chart-analysis/tree/master/Chart-Analyzer), and place dir at the following path ```BarChartAnalyzer_BCA/CRAFT_TextDetector```
 2. Download the pretrained model [craft_mlt_25k.pth](https://drive.google.com/file/d/1Jk4eGD7crsqCCg9C9VjCLkMN3ze8kutZ/view), and place model at the following path ```BarChartAnalyzer_BCA/CRAFT_TextDetector/craft_mlt_25k.pth```
-3. Fetch STR text recognition code from [Deep_TextRecognition](https://github.com/GVCL/Tensor-field-framework-for-chart-analysis/tree/master/Chart-Analyzer/Deep_TextRecognition), and place dir at the following path ```BarChartAnalyzer_BCA/Deep_TextRecognition```
+3. Fetch STR text recognition code from [Deep_TextRecognition](https://github.com/GVCL/Tensor-field-framework-for-chart-analysis/tree/master/Chart-Analyzer), and place dir at the following path ```BarChartAnalyzer_BCA/Deep_TextRecognition```
 4. Download the pretrained model [TPS-ResNet-BiLSTM-Attn.pth](https://drive.google.com/drive/folders/15WPsuPJDCzhp2SvYZLRj8mAlT3zmoAMW), tand place model at the following path ```BarChartAnalyzer_BCA/Deep_TextRecognition/TPS-ResNet-BiLSTM-Attn.pth```
 5. The code is developed and tested on Python 3.6 you can also find attached requirements.txt to avoid errors due to compatibility issues
-6. Finally you can run the  ```Image_uploader.py``` file and upload desired chart image file.
+6. Annotate the chart image and generate it's ```image_name.xml``` file using LabelImg annotation tool | [Tool](https://github.com/tzutalin/labelImg) | [Demo Video](https://www.youtube.com/watch?v=t3rlG_v8sMs) |. Make sure image file and its .xml file are in same directory
+7. Finally you can run the  ```Image_uploader.py``` file and upload desired chart image file.
 
 This wil generate the folowing csv files:
 1. Image_RGB.csv: contains RGB values along with xy-coordinates.
